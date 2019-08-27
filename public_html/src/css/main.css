@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-Light.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-Light.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-Regular.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-Regular.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-Semibold.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-Semibold.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-Bold.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-Bold.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-LightIt.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-LightIt.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-LightIt.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-It.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-It.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-It.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-SemiboldIt.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-SemiboldIt.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-SemiboldIt.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-BoldIt.woff2") format("woff2"), url("../fonts/SourceSerifPro/SourceSerifPro-BoldIt.woff") format("woff"), url("../fonts/SourceSerifPro/SourceSerifPro-BoldIt.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/Lato/Lato-Light.woff2") format("woff2"), url("../fonts/Lato/Lato-Light.woff") format("woff"), url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/Lato/Lato-LightItalic.woff2") format("woff2"), url("../fonts/Lato/Lato-LightItalic.woff") format("woff"), url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/MyriadPro/MyriadPro-Bold.woff2") format("woff2"), url("../fonts/MyriadPro/MyriadPro-Bold.woff") format("woff"), url("../fonts/MyriadPro/MyriadPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("../fonts/MyriadPro/MyriadPro-BoldIt.woff2") format("woff2"), url("../fonts/MyriadPro/MyriadPro-BoldIt.woff") format("woff"), url("../fonts/MyriadPro/MyriadPro-BoldIt.ttf") format("truetype");
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 1rem;
+}
+
+body {
+  color: #212021;
+  background-color: #fff;
+  font-family: "Source Serif Pro", sans-serif;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

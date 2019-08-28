@@ -1,0 +1,40 @@
+.link {
+  display: inline-block;
+  position: relative;
+  color: $text-color;
+  font-family: $font-family-myriadPro;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 2;
+  letter-spacing: 1.5px;
+
+  &:hover {
+    &::before {
+      width: 0;
+    }
+  }
+
+  /**
+   * Делаем таким образом нижнюю границу для эффекта 
+   * плавного выдвижения
+   */
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: $color-darken;
+    @include set-transition("width");
+  }
+
+  &::after {
+    content: "--------";
+    margin-right: 0.8rem;
+    margin-left: 0.2rem;
+    letter-spacing: -2px;
+  }
+}

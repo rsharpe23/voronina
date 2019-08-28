@@ -19,6 +19,7 @@ body {
 }
 
 body {
+  margin: 0;
   color: $text-color;
   background-color: $bg-color;
   font-family: $font-family-sorceSerifPro;
@@ -44,13 +45,3 @@ h3 {
 @include set-h-font-size(
   ($font-size-h1, $font-size-h2, $font-size-h3)
 );
-
-.container {
-  display: block;
-  width: 100%;
-  max-width: $container-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $gutter-width;
-  padding-right: $gutter-width;
-}

@@ -6,6 +6,11 @@
 @import "misc/reset";
 @import "misc/placeholders";
 
+@import "components/container";
+@import "components/screen-index";
+@import "components/logo";
+@import "components/link";
+
 @import "layout/header";
 @import "layout/screen";
 @import "layout/intro";

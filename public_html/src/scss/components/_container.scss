@@ -1,0 +1,9 @@
+.container {
+  display: block;
+  width: 100%;
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}

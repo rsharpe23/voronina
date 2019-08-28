@@ -70,12 +70,17 @@
   }
 }
 
-@mixin add-font($font-family, $font-slug, $font-style, $font-stretch, $font-weight-map) {
+@mixin add-font($font-family, $font-slug, $font-style, $font-stretch, $font-weight-map, $exclude-ext: null) {
   $format-map: (
     ".woff2": "woff2",
     ".woff":  "woff", 
     ".ttf":   "truetype",
   );
+
+  // $exclude-ext может быть списком
+  @if $exclude-ext != null {
+    $format-map: map-remove($format-map, $exclude-ext);
+  }
 
   @each $font-type, $font-weight in $font-weight-map {
     $src: null;

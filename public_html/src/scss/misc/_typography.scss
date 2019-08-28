@@ -33,8 +33,8 @@
 
 @include add-font("Myriad Pro", "MyriadPro", normal, normal, (
   "Bold": $font-weight-bold,
-));
+), ".woff2");
 
 @include add-font("Myriad Pro", "MyriadPro", italic, normal, (
   "BoldIt": $font-weight-bold,
-));
+), ".woff2");

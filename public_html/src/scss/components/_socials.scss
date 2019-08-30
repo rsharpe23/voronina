@@ -1,0 +1,27 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+
+  &__item {
+    font-size: $font-size-small;
+    font-weight: $font-weight-light;
+    letter-spacing: 1.2px;
+
+    + .socials__item::before {
+      content: "\2014";
+      margin-right: 0.25rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    @include set-transition("color");
+
+    &:hover {
+      color: $color-magento;
+    }
+  }
+}

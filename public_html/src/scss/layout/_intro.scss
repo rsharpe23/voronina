@@ -28,7 +28,7 @@
     z-index: 1;
     margin-bottom: 2rem;
 
-    &::before, 
+    &::before,
     &::after {
       position: absolute;
       color: $text-color-inverted;
@@ -45,10 +45,9 @@
 
     &::after {
       content: "Photogrphy";
-      right: -25px;
+      right: 38px;
       bottom: -28px;
-      font-size: 3.5rem;
-      letter-spacing: 4px;
+      font-size: 3.25rem;
     }
   }
 
@@ -56,7 +55,6 @@
     font-size: $font-size-large;
     font-weight: $font-weight-light;
     line-height: 1.2;
-    letter-spacing: 1.4px;
   }
 
   &__link {
@@ -64,34 +62,11 @@
   }
 
   &__socials {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
-
-    > li {
-      font-weight: $font-weight-light;
-      letter-spacing: 1.4px;
-
-      + li::before {
-        content: "\2014";
-        margin-right: 0.4rem;
-        margin-left: 0.4rem;
-      }
-
-      > a {
-        text-transform: uppercase;
-        text-decoration: none;
-        @include set-transition("color");
-
-        &:hover {
-          color: $color-magento;
-        }
-      }
-    }
+    padding-top: 2.35rem;
+    padding-bottom: 2.15rem;
   }
 
-  &__screen-index {
+  &__fp-index {
     position: absolute;
     top: 35%;
     left: 1%;

@@ -16,6 +16,8 @@
 </head>
 
 <body>
+  <!-- TODO: Попробовать вынести container как обверку для всех элементов -->
+
   <div class="intro">
     <header class="header">
       <a href="#"><img class="logo" src="img/logo.png" alt="Логотип"></a>
@@ -46,14 +48,91 @@
         <img src="img/voronina.jpg" alt="Дарья Воронина" class="intro__thumbnail">
       </div>
 
-      <ul class="intro__socials">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
+      <ul class="socials intro__socials">
+        <li class="socials__item">
+          <a href="#" class="socials__link">Instagram</a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">Facebook</a>
+        </li>
       </ul>
     </div>
 
-    <span class="screen-index intro__screen-index">01</span>
+    <span class="fp-index intro__fp-index">01</span>
   </div>
+
+  <section class="work">
+    <div class="container container--no-gutters screen work__screen">
+      <div class="screen__separator"></div>
+
+      <h2 class="title">Портфолио</h2>
+
+      <div class="work__area">
+        <div class="work__item">
+          <figure>
+            <img src="img/work-01.jpg" alt="Фото кондитерской - Леди Мармелад">
+            <figcaption>
+              <p>#соцсети</p>
+              <h4>Фото контент для социальных сетей кондитерской &laquo;Леди Мармелад&raquo;</h4>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="work__item">
+          <figure>
+            <img src="img/work-02.jpg" alt="Фото ресторана - Funky Food">
+            <figcaption>
+              <p>#соцсети</p>
+              <h4>Фото контент для инстаграма ресторана &laquo;Funky Food&raquo;</h4>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/work-03.jpg" alt="Фото кондитерской - Леди Мармелад">
+            <figcaption>
+              <p>#менюресторана</p>
+              <h4>Съемка меню ресторана <br>&laquo;Хорошая еда&raquo;</h4>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="work__item">
+          <figure>
+            <img src="img/work-04.jpg" alt="Фото кондитерской - Леди Мармелад">
+            <figcaption>
+              <p>#рекламнаясъемка</p>
+              <h4>Съемка для баннерной рекламной печати ресторана &laquo;Бранч&raquo;</h4>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="work__more">
+        <div class="work__panel">
+          <h3>Подробное портфолио</h3>
+          <p>С описанием задач заказчика, полного процесса работы и финальным результатом</p>
+          <a href="#" class="link work__link">Скачать в PDF</a>
+        </div>
+      </div>
+
+      <div class="work__leafs">
+        <img src="img/leaf-01.png" alt="Листик">
+        <img src="img/leaf-02.png" alt="Листик">
+        <img src="img/leaf-03.png" alt="Листик">
+      </div>
+    </div>
+
+    <span class="fp-index work__fp-index">02</span>
+
+    <ul class="socials work__socials">
+      <li class="socials__item">
+        <a href="#" class="socials__link">Instagram</a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link">Facebook</a>
+      </li>
+    </ul>
+  </section>
 </body>
 
 </html>

@@ -230,19 +230,33 @@ table {
   border-spacing: 0;
 }
 
+.work__leafs {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   display: block;
   width: 100%;
-  max-width: 1180px;
-  margin-left: auto;
+  max-width: 1108px;
   margin-right: auto;
-  padding-left: 15px;
+  margin-left: auto;
   padding-right: 15px;
+  padding-left: 15px;
 }
 
-.screen-index {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+.container--no-gutters {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.fp-index {
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
   display: inline-block;
   border-bottom: 2px solid #212021;
   font-family: "Lato", sans-serif;
@@ -250,6 +264,19 @@ table {
   font-weight: 300;
   font-style: italic;
   line-height: 2;
+}
+
+.screen {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.screen__separator {
+  width: 2px;
+  height: 36px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #cb98a8;
 }
 
 .logo {
@@ -295,6 +322,47 @@ table {
   margin-right: 0.8rem;
   margin-left: 0.2rem;
   letter-spacing: -2px;
+}
+
+.title {
+  margin-top: 6.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.socials__item {
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+}
+
+.socials__item + .socials__item::before {
+  content: "\2014";
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.socials__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.socials__link:hover {
+  color: #cb98a8;
 }
 
 .header {
@@ -365,12 +433,11 @@ table {
 
 .header__phone {
   display: inline-block;
-  margin-top: 0.65rem;
-  margin-left: 7.2rem;
+  margin-top: 0.75rem;
+  margin-left: 7rem;
   color: #878787;
-  font-size: 1.35rem;
+  font-size: 1.125rem;
   font-weight: 700;
-  letter-spacing: 1px;
 }
 
 .intro {
@@ -426,17 +493,15 @@ table {
 
 .intro__title::after {
   content: "Photogrphy";
-  right: -25px;
+  right: 38px;
   bottom: -28px;
-  font-size: 3.5rem;
-  letter-spacing: 4px;
+  font-size: 3.25rem;
 }
 
 .intro__content {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.2;
-  letter-spacing: 1.4px;
 }
 
 .intro__link {
@@ -444,6 +509,51 @@ table {
 }
 
 .intro__socials {
+  padding-top: 2.35rem;
+  padding-bottom: 2.15rem;
+}
+
+.intro__fp-index {
+  position: absolute;
+  top: 35%;
+  left: 1%;
+}
+
+.work {
+  position: relative;
+}
+
+.work__screen {
+  position: relative;
+  padding-top: 10%;
+  padding-bottom: 7%;
+}
+
+.work__screen::before, .work__screen::after {
+  content: "";
+  width: 2px;
+  position: absolute;
+  background-color: black;
+}
+
+.work__screen::before {
+  height: 61%;
+  top: 7%;
+  left: 33%;
+}
+
+.work__screen::after {
+  height: 100%;
+  top: 0;
+  left: 66.5%;
+}
+
+.work__area, .work__more {
+  position: relative;
+  z-index: 1;
+}
+
+.work__area {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -451,37 +561,122 @@ table {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  margin-right: -15px;
+  margin-bottom: 16.25%;
+  margin-left: -15px;
 }
 
-.intro__socials > li {
+.work__item {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.work__item > figure > img {
+  width: 100%;
+  height: auto;
+}
+
+.work__item > figure > figcaption {
+  margin-top: 1rem;
+}
+
+.work__item > figure > figcaption p {
+  margin-bottom: 0.5rem;
+  color: #1d1c1c;
+  font-size: 0.875rem;
   font-weight: 300;
-  letter-spacing: 1.4px;
 }
 
-.intro__socials > li + li::before {
-  content: "\2014";
-  margin-right: 0.4rem;
-  margin-left: 0.4rem;
+.work__item > figure > figcaption h4 {
+  font-weight: 700;
+  line-height: 1.15;
 }
 
-.intro__socials > li > a {
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-transition: color 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out;
+.work__item:nth-child(1) {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 39%;
+      -ms-flex: 0 0 39%;
+          flex: 0 0 39%;
 }
 
-.intro__socials > li > a:hover {
-  color: #cb98a8;
+.work__item:nth-child(1) > figure {
+  margin-top: 63%;
 }
 
-.intro__screen-index {
+.work__item:nth-child(2) {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30.75%;
+      -ms-flex: 0 0 30.75%;
+          flex: 0 0 30.75%;
+}
+
+.work__item:nth-child(2) > figure {
+  margin-top: 28%;
+}
+
+.work__item:nth-child(3) {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30.25%;
+      -ms-flex: 0 0 30.25%;
+          flex: 0 0 30.25%;
+}
+
+.work__item:nth-child(3) > figure {
+  margin-top: 93%;
+}
+
+.work__leafs > img {
   position: absolute;
-  top: 35%;
-  left: 1%;
+}
+
+.work__leafs > img:nth-child(1) {
+  top: 11.25%;
+  left: -6.5%;
+}
+
+.work__leafs > img:nth-child(2) {
+  top: 9%;
+  right: 30.3%;
+}
+
+.work__leafs > img:nth-child(3) {
+  top: 16%;
+  right: -4%;
+}
+
+.work__fp-index {
+  position: absolute;
+  top: 53.6%;
+  left: 3.9%;
+}
+
+.work__socials {
+  position: absolute;
+  top: 52.5%;
+  right: 3.5%;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+.work__panel {
+  width: 64%;
+  margin-left: 23%;
+  padding: 8.85% 19.2% 16.2%;
+  border: 8px solid #8eb574;
+}
+
+.work__panel h3 {
+  margin-bottom: 1.5rem;
+}
+
+.work__panel p {
+  font-size: 1.125rem;
+  line-height: 1.15;
+}
+
+.work__link {
+  margin-top: 1.25rem;
 }
 
 *,
@@ -509,6 +704,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p,
 ul,
 ol {
@@ -517,7 +713,8 @@ ol {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 600;
 }
 
@@ -531,4 +728,13 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+strong {
+  font-size: 1.125rem;
+  font-weight: 700;
 }

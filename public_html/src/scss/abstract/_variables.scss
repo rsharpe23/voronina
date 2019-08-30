@@ -12,17 +12,17 @@ $color-darken:              #212021 !default;
 $color-darkest:             #1d1c1c !default;
 
 $main-color:                $color-green !default;
+$bg-color:                  $color-white !default;
+$separator-color:           $color-magento !default;
 
 $text-color:                $color-darken !default;
 $text-color-inverted:       $color-white !default;
-
-$bg-color:                  $color-white !default;
 
 
 // Border
 // ============
 
-$border-width:              1px !default;
+$border-width:              8px !default;
 $border-color:              $color-green !default;
 $border-setup:              $border-width solid $border-color !default;
 
@@ -42,6 +42,7 @@ $font-size-large:           1.125rem !default;
 $font-size-h1:              3rem !default;
 $font-size-h2:              2.25rem !default;
 $font-size-h3:              1.5rem !default;
+$font-size-h4:              1.125rem !default;
 
 $font-weight:               400 !default;
 $font-weight-light:         300 !default;
@@ -67,6 +68,6 @@ $screen-xl:               1200px !default;
 // ============
 
 $container-width:         1170px !default;
-$container-width:         1180px;
+$container-width:         1108px;
 
 $gutter-width:            15px !default;

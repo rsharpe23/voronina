@@ -46,11 +46,10 @@
 
   &__phone {
     display: inline-block;
-    margin-top: 0.65rem;
-    margin-left: 7.2rem;
+    margin-top: 0.75rem;
+    margin-left: 7rem;
     color: $color-light-dark;
-    font-size: 1.35rem;
+    font-size: $font-size-large;
     font-weight: $font-weight-bold;
-    letter-spacing: 1px;
   }
 }

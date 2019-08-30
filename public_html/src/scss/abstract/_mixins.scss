@@ -100,3 +100,16 @@
     }
   }
 }
+
+@mixin set-bg-image($url, $bg-size: false, $bg-position: false) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+
+  @if $bg-size != false {
+    background-size: $bg-size;
+  }
+
+  @if $bg-position != false {
+    background-position: $bg-position;
+  }
+}

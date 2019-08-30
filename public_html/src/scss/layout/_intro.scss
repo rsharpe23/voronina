@@ -1,9 +1,8 @@
 .intro {
-  position: relative;
+  padding-top: 4.75rem; // Временно до height: 100vh
+
+  @include set-bg-image("../img/intro-bg.jpg", false, right);
   background-color: $color-light-gray;
-  background-image: url("../img/intro-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: right;
 
   &__area {
     width: 100%;
@@ -20,6 +19,8 @@
 
   &__info {
     width: 44.75%;
+    position: relative;
+    z-index: 1;
     margin-top: 13%;
   }
 

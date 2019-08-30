@@ -1,0 +1,54 @@
+.about {
+  &__module {
+    padding-top: 4.35%;
+  }
+
+  &__title::before {
+    content: "About";
+  }
+
+  &__panel {
+    width: 58.25%;
+    position: relative;
+    margin-top: 15.8%;
+    margin-left: auto;
+    padding: 3.4rem 3rem 5rem 15.6rem;
+    background-color: $bg-color;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      width: 57.25%;
+      height: 69.5%;
+      top: -26.25%;
+      right: 139.25%;
+      z-index: -1;
+      background-color: #aaa;
+    }
+
+    &::after {
+      width: 103%;
+      height: 100%;
+      top: -16%;
+      right: 68.85%;
+      @include set-bg-image("../img/about-bg.jpg");
+    }
+  }
+
+  &__content {
+    font-size: $font-size-large;
+    line-height: $line-height;
+
+    p {
+      margin-bottom: $margin-bottom;
+    }
+  }
+
+  &__link {
+    margin-top: 0.5rem;
+  }
+}

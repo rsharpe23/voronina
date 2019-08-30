@@ -12,7 +12,7 @@ $color-darken:              #212021 !default;
 $color-darkest:             #1d1c1c !default;
 
 $main-color:                $color-green !default;
-$bg-color:                  $color-white !default;
+$bg-color:                  $color-light-gray !default;
 $separator-color:           $color-magento !default;
 
 $text-color:                $color-darken !default;
@@ -52,22 +52,25 @@ $font-weight-bold:          700 !default;
 
 // Leading
 // ============
+$line-height:               1.25 !default;
 
 
 // Screens
 // ============
 
-$screen-xs:               0 !default;
-$screen-sm:               576px !default;
-$screen-md:               768px !default;
-$screen-lg:               992px !default;
-$screen-xl:               1200px !default;
+$screen-xs:                 0 !default;
+$screen-sm:                 576px !default;
+$screen-md:                 768px !default;
+$screen-lg:                 992px !default;
+$screen-xl:                 1200px !default;
 
 
 // Misc
 // ============
 
-$container-width:         1170px !default;
-$container-width:         1108px;
+$margin-bottom:             1.825rem !default;
 
-$gutter-width:            15px !default;
+$container-width:           1170px !default;
+$container-width:           1108px;
+
+$gutter-width:              15px !default;

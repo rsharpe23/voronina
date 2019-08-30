@@ -1,0 +1,14 @@
+.leafs {
+  @extend %bg-overlay;
+  overflow-x: hidden;
+
+  &__inner {
+    height: 100%;
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    z-index: 1;
+  }
+}

@@ -16,23 +16,21 @@
 </head>
 
 <body>
-  <!-- TODO: Попробовать вынести container как обверку для всех элементов -->
+  <header class="header">
+    <a href="#"><img class="logo" src="img/logo.png" alt="Логотип"></a>
 
-  <div class="intro">
-    <header class="header">
-      <a href="#"><img class="logo" src="img/logo.png" alt="Логотип"></a>
+    <nav>
+      <ul class="header__navbar">
+        <li><a href="#">Обо мне</a></li>
+        <li><a href="#">Стоимость</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
 
-      <nav>
-        <ul class="header__navbar">
-          <li><a href="#">Обо мне</a></li>
-          <li><a href="#">Стоимость</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+    <span class="header__phone">+ 7 916 66 77 112</span>
+  </header>
 
-      <span class="header__phone">+ 7 916 66 77 112</span>
-    </header>
-
+  <section class="intro screen">
     <div class="intro__area">
       <div class="intro__cover">
         <div class="intro__info">
@@ -48,6 +46,7 @@
         <img src="img/voronina.jpg" alt="Дарья Воронина" class="intro__thumbnail">
       </div>
 
+      <!-- При height: 100vh можно применить абсолютное позиционирование -->
       <ul class="socials intro__socials">
         <li class="socials__item">
           <a href="#" class="socials__link">Instagram</a>
@@ -59,66 +58,72 @@
     </div>
 
     <span class="fp-index intro__fp-index">01</span>
-  </div>
+  </section>
 
-  <section class="work">
-    <div class="container container--no-gutters screen work__screen">
-      <div class="screen__separator"></div>
+  <section class="work screen">
+    <div class="container container--no-gutters borders">
+      <div class="work__module">
+        <div class="screen__separator"></div>
 
-      <h2 class="title">Портфолио</h2>
+        <h2 class="title work__title">Портфолио</h2>
 
-      <div class="work__area">
-        <div class="work__item">
-          <figure>
-            <img src="img/work-01.jpg" alt="Фото кондитерской - Леди Мармелад">
-            <figcaption>
-              <p>#соцсети</p>
-              <h4>Фото контент для социальных сетей кондитерской &laquo;Леди Мармелад&raquo;</h4>
-            </figcaption>
-          </figure>
+        <div class="work__area">
+          <div class="work__item">
+            <figure>
+              <a href="#"><img src="img/work-01.jpg" alt="Фото кондитерской - Леди Мармелад" class="img"></a>
+
+              <figcaption>
+                <p>#соцсети</p>
+                <h4>Фото контент для социальных сетей кондитерской &laquo;Леди Мармелад&raquo;</h4>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="work__item">
+            <figure>
+              <a href="#"><img src="img/work-02.jpg" alt="Фото ресторана - Funky Food" class="img"></a>
+
+              <figcaption>
+                <p>#соцсети</p>
+                <h4>Фото контент для инстаграма ресторана &laquo;Funky Food&raquo;</h4>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <a href="#"><img src="img/work-03.jpg" alt="Фото кондитерской - Леди Мармелад" class="img"></a>
+
+              <figcaption>
+                <p>#менюресторана</p>
+                <h4>Съемка меню ресторана <br>&laquo;Хорошая еда&raquo;</h4>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="work__item">
+            <figure>
+              <a href="#"><img src="img/work-04.jpg" alt="Рекламная печать ресторана - Бранч" class="img"></a>
+
+              <figcaption>
+                <p>#рекламнаясъемка</p>
+                <h4>Съемка для баннерной рекламной печати ресторана &laquo;Бранч&raquo;</h4>
+              </figcaption>
+            </figure>
+          </div>
         </div>
 
-        <div class="work__item">
-          <figure>
-            <img src="img/work-02.jpg" alt="Фото ресторана - Funky Food">
-            <figcaption>
-              <p>#соцсети</p>
-              <h4>Фото контент для инстаграма ресторана &laquo;Funky Food&raquo;</h4>
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img src="img/work-03.jpg" alt="Фото кондитерской - Леди Мармелад">
-            <figcaption>
-              <p>#менюресторана</p>
-              <h4>Съемка меню ресторана <br>&laquo;Хорошая еда&raquo;</h4>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="work__item">
-          <figure>
-            <img src="img/work-04.jpg" alt="Фото кондитерской - Леди Мармелад">
-            <figcaption>
-              <p>#рекламнаясъемка</p>
-              <h4>Съемка для баннерной рекламной печати ресторана &laquo;Бранч&raquo;</h4>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="work__more">
         <div class="work__panel">
           <h3>Подробное портфолио</h3>
           <p>С описанием задач заказчика, полного процесса работы и финальным результатом</p>
-          <a href="#" class="link work__link">Скачать в PDF</a>
+          <a href="#" class="link work__link">Скачать в PDF <img src="img/pdf.png" alt="иконка - PDF"></a>
         </div>
-      </div>
 
-      <div class="work__leafs">
-        <img src="img/leaf-01.png" alt="Листик">
-        <img src="img/leaf-02.png" alt="Листик">
-        <img src="img/leaf-03.png" alt="Листик">
+        <!-- <div class="work__more">
+          <div class="work__panel">
+            <h3>Подробное портфолио</h3>
+            <p>С описанием задач заказчика, полного процесса работы и финальным результатом</p>
+            <a href="#" class="link work__link">Скачать в PDF <img src="img/pdf.png" alt="иконка - PDF"></a>
+          </div>
+        </div> -->
       </div>
     </div>
 
@@ -132,7 +137,52 @@
         <a href="#" class="socials__link">Facebook</a>
       </li>
     </ul>
+
+    <ul class="socials work__socials">
+      <li class="socials__item">
+        <a href="#" class="socials__link">Instagram</a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link">Facebook</a>
+      </li>
+    </ul>
   </section>
+
+  <section class="about screen">
+    <div class="container container--no-gutters borders">
+      <div class="about__module">
+        <div class="screen__separator"></div>
+
+        <h2 class="title about__title">Обо мне</h2>
+
+        <div class="about__panel">
+          <div class="about__content">
+            <p>Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист. Создаю креативные концепции, реализую
+              ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
+
+            <p>Всегда открыта к сотрудничеству и рада новым предложениям</p>
+
+            <p>Tel.: daria.voronina@gmail.com <br>Mail:+ 7 916 66 77 112</p>
+          </div>
+
+          <a href="#" class="link about__link">Работать со мной</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODO: Переместить в начало документа, а все экраны обернуть во wrapper
+  Почистить лишние font-size, z-index, line-height, margin-bottom (для p, h1-4, ul) 
+  Попробовать сделать полосы через градиент (для каждого экрана отдельный) -->
+
+  <div class="leafs">
+    <div class="container container--no-gutters leafs__inner">
+      <img src="img/leaf-01.png" alt="Листик" class="leafs__item" style="top: 16.85%; left: -6%;">
+      <img src="img/leaf-02.png" alt="Листик" class="leafs__item" style="top: 16%; left: 64%;">
+      <img src="img/leaf-03.png" alt="Листик" class="leafs__item" style="top: 18.5%; left: 95%;">
+      <img src="img/leaf-04.png" alt="Листик" class="leafs__item" style="top: 41.1%; left: 94.5%;">
+    </div>
+  </div>
 </body>
 
 </html>

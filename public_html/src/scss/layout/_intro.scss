@@ -1,33 +1,32 @@
 .intro {
-  padding-top: 4.75rem; // Временно до height: 100vh
-
   @include set-bg-image("../img/intro-bg.jpg", false, right);
   background-color: $color-light-gray;
 
   &__area {
     width: 100%;
-    max-width: 1130px;
+    max-width: 1258px;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 
   &__cover {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 5.2rem;
+    padding-top: 10rem;
   }
 
   &__info {
+    flex: 0 0 44.75%;
     width: 44.75%;
-    position: relative;
-    z-index: 1;
-    margin-top: 13%;
+    margin-top: 8.75rem;
+    padding-right: $gutter-width;
   }
 
   &__title {
     position: relative;
-    z-index: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
 
     &::before,
     &::after {
@@ -53,22 +52,15 @@
   }
 
   &__content {
-    font-size: $font-size-large;
     font-weight: $font-weight-light;
-    line-height: 1.2;
-  }
-
-  &__link {
-    margin-top: 0.7rem;
   }
 
   &__socials {
-    padding-top: 2.35rem;
+    padding-top: 2.25rem;
     padding-bottom: 2.15rem;
   }
 
-  &__fp-index {
-    position: absolute;
+  &__index {
     top: 35%;
     left: 1%;
   }

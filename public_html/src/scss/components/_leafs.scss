@@ -5,6 +5,7 @@
   &__inner {
     height: 100%;
     position: relative;
+    @include set-strips(90deg, ($strip-color 0.2%, transparent 99.8%, $strip-color 100%));
   }
 
   &__item {

@@ -43,10 +43,22 @@
 
 @mixin set-border-radius($side, $radius: $border-radius) {
   $side-map: (
-    "top":    ("top-left", "top-right"),
-    "right":  ("top-right", "bottom-right"),
-    "bottom": ("bottom-left", "bottom-right"),
-    "left":   ("top-left", "bottom-left"),
+    "top": (
+      "top-left",
+      "top-right"
+    ),
+    "right": (
+      "top-right",
+      "bottom-right"
+    ),
+    "bottom": (
+      "bottom-left",
+      "bottom-right"
+    ),
+    "left": (
+      "top-left",
+      "bottom-left"
+    )
   );
 
   @each $key, $value in $side-map {
@@ -73,8 +85,8 @@
 @mixin add-font($font-family, $font-slug, $font-style, $font-stretch, $font-weight-map, $exclude-ext: null) {
   $format-map: (
     ".woff2": "woff2",
-    ".woff":  "woff", 
-    ".ttf":   "truetype",
+    ".woff": "woff",
+    ".ttf": "truetype"
   );
 
   // $exclude-ext может быть списком
@@ -87,11 +99,11 @@
     $path: "../fonts/#{$font-slug}/#{$font-slug}-#{$font-type}";
 
     @each $ext, $format in $format-map {
-      $temp: url($path + $ext) format($format);
+      $temp: url($path+$ext) format($format);
       $src: append($src, $temp, comma);
     }
 
-    @font-face{
+    @font-face {
       font-family: $font-family;
       font-weight: $font-weight;
       font-style: $font-style;
@@ -112,4 +124,18 @@
   @if $bg-position != false {
     background-position: $bg-position;
   }
+}
+
+@mixin set-strips($dir-angle, $color-list) {
+  $last-size: 0%;
+  $new-color-list: ();
+
+  @each $color, $size in $color-list {
+    $temp: $color $last-size, $color $size;
+    $new-color-list: append($new-color-list, $temp, comma);
+
+    $last-size: $size;
+  }
+
+  background-image: linear-gradient($dir-angle, $new-color-list);
 }

@@ -1,18 +1,29 @@
 .about {
-  &__module {
-    padding-top: 4.35%;
+  &__area {
+    padding-top: 8.25rem;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      @include set-strips(180deg, ($strip-color 9%, transparent 42%, $strip-color 100%));
+    }
   }
 
-  &__title::before {
-    content: "About";
+  &__title {
+    margin-bottom: 10.5rem;
+
+    &::before {
+      content: "About";
+    }
   }
 
   &__panel {
     width: 58.25%;
     position: relative;
-    margin-top: 15.8%;
     margin-left: auto;
-    padding: 3.4rem 3rem 5rem 15.6rem;
+    padding: 3.4rem 3rem 5.5rem 15.65rem;
     background-color: $bg-color;
 
     &::before,
@@ -25,7 +36,7 @@
       width: 57.25%;
       height: 69.5%;
       top: -26.25%;
-      right: 139.25%;
+      right: 139.75%;
       z-index: -1;
       background-color: #aaa;
     }
@@ -33,22 +44,21 @@
     &::after {
       width: 103%;
       height: 100%;
-      top: -16%;
-      right: 68.85%;
+      top: -15.5%;
+      right: 68.9%;
       @include set-bg-image("../img/about-bg.jpg");
     }
   }
 
-  &__content {
-    font-size: $font-size-large;
-    line-height: $line-height;
-
-    p {
-      margin-bottom: $margin-bottom;
-    }
+  &__link {
+    margin-top: 1rem;
   }
 
-  &__link {
-    margin-top: 0.5rem;
+  &__index {
+    top: 59.5%;
+  }
+
+  &__socials {
+    top: 61.5%;
   }
 }

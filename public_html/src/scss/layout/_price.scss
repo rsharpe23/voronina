@@ -1,0 +1,131 @@
+.price {
+  padding-top: 6rem;
+  
+  &::before, 
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: $bg-color;
+  }
+
+  &::before {
+    width: 30%;
+    height: 18.25%;
+    top: 44.5%;
+    left: 0;
+  }
+
+  &::after {
+    width: 25%;
+    height: 18.65%;
+    top: 46%;
+    right: 0;
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    &::before {
+      content: "Price";
+    }
+  }
+
+  &__bg {
+    @include set-gradient((
+      "angle": 180deg,
+      "gradient": (transparent 44.25%, $bg-color 67%, transparent 100%)
+    ));
+  }
+
+  &__item {
+    position: relative;
+
+    &:nth-child(1) {
+      flex: 0 0 39%;
+      width: 39%;
+
+      > figure {
+        padding-top: 22.75rem;
+
+        figcaption {
+          > h3 {
+            margin-left: 19%;
+
+            > p {
+              margin-right: 24%;
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      flex: 0 0 30.75%;
+      width: 30.75%;
+
+      > figure {
+        margin-top: 12rem;
+
+        figcaption {
+          > h3 {
+            margin-left: 15%;
+
+            > p {
+              margin-right: 18%;
+            }
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      flex: 0 0 30.25%;
+      width: 30.25%;
+
+      > figure {
+        padding-top: 24.5rem;
+
+        figcaption {
+          > h3 {
+            margin-left: 17%;
+
+            > p {
+              margin-right: 20%;
+            }
+          }
+        }
+      }
+    }
+
+    figure figcaption {
+      > h3 {
+        margin-top: 1.85rem;
+        color: $main-color;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+
+        > p {
+          line-height: 1;
+          text-align: right;
+
+          > small {
+            font-size: $font-size-large;
+          }
+        }
+      }
+
+      > p {
+        text-align: center;
+      }
+    }
+  }
+
+  &__socials {
+    top: 49.25%;
+  }
+
+  &__index {
+    top: 56%;
+  }
+}

@@ -126,16 +126,50 @@
   }
 }
 
-@mixin set-strips($dir-angle, $color-list) {
-  $last-size: 0%;
-  $new-color-list: ();
+// @mixin set-strips($dir-angle, $color-list) {
+//   $last-size: 0%;
+//   $new-color-list: ();
 
-  @each $color, $size in $color-list {
+//   @each $color, $size in $color-list {
+//     $temp: $color $last-size, $color $size;
+//     $new-color-list: append($new-color-list, $temp, comma);
+
+//     $last-size: $size;
+//   }
+
+//   background-image: linear-gradient($dir-angle, $new-color-list);
+// }
+
+@mixin set-gradient($gradient-setup-list) {
+  $linear-gradient: ();
+  $arg-type: type-of($gradient-setup-list);
+
+  @if $arg-type == "list" {
+    @each $gradient-setup in $gradient-setup-list {
+      $linear-gradient: append($linear-gradient, set-gradient__fn($gradient-setup), comma);
+    }
+  } @else if $arg-type == "map" {
+    $linear-gradient: set-gradient__fn($gradient-setup-list);
+  } @else {
+    @error "Invalid argument";
+  }
+
+  background-image: $linear-gradient;
+}
+
+@function set-gradient__fn($gradient-setup) {
+  $last-size: 0%;
+
+  $angle: map-get($gradient-setup, "angle");
+  $gradient: map-get($gradient-setup, "gradient");
+  $new-gradient: ();
+
+  @each $color, $size in $gradient {
     $temp: $color $last-size, $color $size;
-    $new-color-list: append($new-color-list, $temp, comma);
+    $new-gradient: append($new-gradient, $temp, comma);
 
     $last-size: $size;
   }
 
-  background-image: linear-gradient($dir-angle, $new-color-list);
+  @return linear-gradient($angle, $new-gradient);
 }

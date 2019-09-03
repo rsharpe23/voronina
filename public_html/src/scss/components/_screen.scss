@@ -1,6 +1,5 @@
 .screen {
   position: relative;
-
   // HACK: Для корректного проигрывания анимаций, чтобы не вылазили и т.д.
   // (дополнительно и в каждой секции)
   // BUG: На некоторых экрана съекзжают элементы при overwlow-x
@@ -12,28 +11,6 @@
     margin-right: auto;
     margin-left: auto;
     background-color: $separator-color;
-  }
-
-  &__strips {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-      width: $strip-width;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-    }
-
-    &::before {
-      left: 33.25%;
-    }
-
-    &::after {
-      left: 66.5%;
-    }
   }
 
   &__index {

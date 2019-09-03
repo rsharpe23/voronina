@@ -1,0 +1,50 @@
+.footer {
+  padding-top: 5.75rem;
+  padding-bottom: 10rem;
+
+  &__title {
+    margin-bottom: 6.4rem;
+  }
+
+  &__menu {
+    @extend %flex-center;
+    justify-content: space-around;
+    position: relative;
+    margin-bottom: 4.25rem;
+
+    &::before {
+      @extend .title::before;
+      content: "Contacts";
+      font-size: _rem(120px);
+    }
+
+    > li {
+      font-weight: $font-weight-bold;
+      letter-spacing: 1.25px;
+    }
+  }
+
+  &__socials {
+    @extend %flex-center;
+    justify-content: center;
+
+    > li {
+      color: $text-color-inverted;
+      background-color: $color-dark;
+      font-weight: $font-weight;
+      font-size: _rem(20px);
+
+      + li {
+        margin-left: _rem(20px);
+      }
+
+      > a {
+        @extend %flex-center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        color: inherit;
+      }
+    }
+  }
+}

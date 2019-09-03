@@ -7,24 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
-  <style>
+  <!-- <style>
     body {
       height: 6126px;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
-  <div class="leafs">
-    <div class="container container--no-gutters leafs__inner">
-      <img src="img/leaf-01.png" alt="Листик" class="leafs__item" style="top: 16.85%; left: -6%;">
-      <img src="img/leaf-02.png" alt="Листик" class="leafs__item" style="top: 16%; left: 64%;">
-      <img src="img/leaf-03.png" alt="Листик" class="leafs__item" style="top: 18.5%; left: 95%;">
-      <img src="img/leaf-04.png" alt="Листик" class="leafs__item" style="top: 41.1%; left: 94.5%;">
-      <img src="img/leaf-05.png" alt="Листик" class="leafs__item" style="top: 49.8%; left: -4.5%;">
+  <!-- <div class="decors">
+    <div class="container container--no-gutters decors__inner">
+      <img src="img/leaf-01.png" alt="Листик" class="decors__item" style="top: 16.85%; left: -6%;">
+      <img src="img/leaf-02.png" alt="Листик" class="decors__item" style="top: 16%; left: 64%;">
+      <img src="img/leaf-03.png" alt="Листик" class="decors__item" style="top: 18.5%; left: 95%;">
+      <img src="img/leaf-04.png" alt="Листик" class="decors__item" style="top: 41.1%; left: 94.5%;">
+      <img src="img/leaf-05.png" alt="Листик" class="decors__item" style="top: 49.8%; left: -4.5%;">
+      <img src="img/leaf-06.png" alt="Листик" class="decors__item" style="top: 64.3%; left: 64.5%;">
+      <img src="img/leaf-07.png" alt="Листик" class="decors__item" style="top: 66.65%; left: -3.5%;">
+      <img src="img/leaf-08.png" alt="Листик" class="decors__item" style="top: 88.25%; left: 94.5%;">
+      <img src="img/leaf-09.png" alt="Листик" class="decors__item" style="top: 92.2%; left: -3.75%;">
     </div>
-  </div>
+  </div> -->
 
   <div class="wrapper">
     <header class="header">
@@ -46,9 +51,9 @@
     </header>
 
     <section class="screen intro">
-      <div class="intro__area">
-        <div class="intro__cover">
-          <div class="intro__info">
+      <div class="container intro__container">
+        <div class="item-group">
+          <div class="item intro__item">
             <h1 class="intro__title">Дарья Воронина</h1>
 
             <div class="intro__content">
@@ -58,7 +63,9 @@
             <a href="#" class="link intro__link">Портфолио</a>
           </div>
 
-          <img src="img/voronina.jpg" alt="Дарья Воронина">
+          <div class="item intro__item">
+            <img src="img/voronina.jpg" alt="Дарья Воронина" class="img">
+          </div>
         </div>
 
         <ul class="socials intro__socials">
@@ -75,56 +82,58 @@
     </section>
 
     <section class="screen work">
-      <div class="container container--no-gutters">
-        <div class="screen__strips work__area">
-          <div class="screen__separator"></div>
+      <div class="container">
+        <div class="screen__separator"></div>
 
-          <h2 class="title work__title">Портфолио</h2>
+        <h2 class="title work__title">Портфолио</h2>
 
-          <div class="work__item-group">
-            <div class="work__item">
-              <figure>
-                <a href="#"><img src="img/work-01.jpg" alt="Фото кондитерской - Леди Мармелад" class="img"></a>
+        <div class="item-group">
+          <div class="item work__item">
+            <figure>
+              <a href="#"><img src="img/work-01.jpg" alt="Фото кондитерской - Леди Мармелад" class="img"></a>
 
-                <figcaption>
-                  <p>#соцсети</p>
-                  <h4>Фото контент для социальных сетей кондитерской &laquo;Леди Мармелад&raquo;</h4>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="work__item">
-              <figure>
-                <a href="#"><img src="img/work-02.jpg" alt="Фото ресторана - Funky Food" class="img"></a>
-
-                <figcaption>
-                  <p>#соцсети</p>
-                  <h4>Фото контент для инстаграма ресторана &laquo;Funky Food&raquo;</h4>
-                </figcaption>
-              </figure>
-
-              <figure>
-                <a href="#"><img src="img/work-03.jpg" alt="Фото кондитерской - Леди Мармелад" class="img"></a>
-
-                <figcaption>
-                  <p>#менюресторана</p>
-                  <h4>Съемка меню ресторана <br>&laquo;Хорошая еда&raquo;</h4>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div class="work__item">
-              <figure>
-                <a href="#"><img src="img/work-04.jpg" alt="Рекламная печать ресторана - Бранч" class="img"></a>
-
-                <figcaption>
-                  <p>#рекламнаясъемка</p>
-                  <h4>Съемка для баннерной рекламной печати ресторана &laquo;Бранч&raquo;</h4>
-                </figcaption>
-              </figure>
-            </div>
+              <figcaption>
+                <p>#соцсети</p>
+                <h4>Фото контент для социальных сетей кондитерской &laquo;Леди Мармелад&raquo;</h4>
+              </figcaption>
+            </figure>
           </div>
 
+          <div class="item work__item">
+            <figure>
+              <a href="#"><img src="img/work-02.jpg" alt="Фото ресторана - Funky Food" class="img"></a>
+
+              <figcaption>
+                <p>#соцсети</p>
+                <h4>Фото контент для инстаграма ресторана &laquo;Funky Food&raquo;</h4>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <a href="#"><img src="img/work-03.jpg" alt="Фото кондитерской - Леди Мармелад" class="img"></a>
+
+              <figcaption>
+                <p>#менюресторана</p>
+                <h4>Съемка меню ресторана <br>&laquo;Хорошая еда&raquo;</h4>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="item work__item">
+            <figure>
+              <a href="#"><img src="img/work-04.jpg" alt="Рекламная печать ресторана - Бранч" class="img"></a>
+
+              <figcaption>
+                <p>#рекламнаясъемка</p>
+                <h4>Съемка для баннерной рекламной печати ресторана &laquo;Бранч&raquo;</h4>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="work__more">
+        <div class="container">
           <div class="work__panel">
             <h3>Подробное портфолио</h3>
             <p>С описанием задач заказчика, полного процесса работы и финальным результатом</p>
@@ -155,24 +164,30 @@
     </section>
 
     <section class="screen about">
-      <div class="container container--no-gutters borders">
-        <div class="about__area screen__strips">
-          <div class="screen__separator"></div>
+      <div class="container">
+        <div class="screen__separator"></div>
 
-          <h2 class="title about__title">Обо мне</h2>
+        <h2 class="title about__title">Обо мне</h2>
 
-          <div class="about__panel">
-            <div class="about__content">
-              <p>Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист. Создаю креативные концепции,
-                реализую
-                ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
+        <div class="item-group">
+          <div class="item about__item">
+            <img src="img/about-bg.jpg" alt="" class="img">
+          </div>
 
-              <p>Всегда открыта к сотрудничеству и рада новым предложениям</p>
+          <div class="item about__item">
+            <div class="about__panel">
+              <div class="about__content">
+                <p>Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист. Создаю креативные концепции,
+                  реализую
+                  ваши идеи. Разрабатываю рецепты, вкусно снимаю. Провожу обучение</p>
 
-              <p>Tel.: daria.voronina@gmail.com <br>Mail: + 7 916 66 77 112</p>
+                <p>Всегда открыта к сотрудничеству и рада новым предложениям</p>
+
+                <p>Tel.: daria.voronina@gmail.com <br>Mail: + 7 916 66 77 112</p>
+              </div>
+
+              <a href="#" class="link about__link">Работать со мной</a>
             </div>
-
-            <a href="#" class="link about__link">Работать со мной</a>
           </div>
         </div>
       </div>
@@ -188,6 +203,106 @@
         </li>
       </ul>
     </section>
+
+    <section class="screen price">
+      <div class="container">
+        <div class="screen__separator"></div>
+
+        <h2 class="title price__title">Стоимость</h2>
+
+        <div class="price__bg">
+          <div class="item-group">
+            <div class="item price__item">
+              <figure>
+                <a href="#"><img src="img/price-01.jpg" alt="" class="img"></a>
+
+                <figcaption>
+                  <h3>12 часов съемки <p>&mdash; <small>30 000 рублей</small></p>
+                  </h3>
+                  <p>Подготовка к съемке от 1 недели <br>
+                    Предварительный дизайн &mdash; проект <br>
+                    Food - стилзация <br>
+                    Расширенный реквизит <br>
+                    Цветокоррекция и пост-обработка <br>
+                    Результаты в течении 3-х дней</p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="item price__item">
+              <figure>
+                <a href="#"><img src="img/price-02.jpg" alt="" class="img"></a>
+
+                <figcaption>
+                  <h3>4 часа съемки <p>&mdash; <small>15 000 рублей</small></p>
+                  </h3>
+                  <p>Подготовка к съемке - 1 день <br>
+                    Food - стилзация <br>
+                    Использование реквизита <br>
+                    Цветокоррекция и пост-обработка <br>
+                    Результаты в течении 3-х дней</p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="item price__item">
+              <figure>
+                <a href="#"><img src="img/price-03.jpg" alt="" class="img"></a>
+
+                <figcaption>
+                  <h3>1 час съемки <p>&mdash; <small>4 000 рублей</small></p>
+                  </h3>
+                  <p>Food - стилзация <br>
+                    Использование реквизита <br>
+                    Цветокоррекция <br>
+                    Результаты в течении 5-х дней</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="index screen__index price__index">04</span>
+
+      <ul class="socials screen__socials price__socials">
+        <li class="socials__item">
+          <a href="#" class="socials__link">Instagram</a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">Facebook</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="screen footer">
+      <div class="container">
+        <div class="screen__separator"></div>
+
+        <h2 class="title footer__title">Свяжитесь со мной</h2>
+
+        <ul class="footer__menu">
+          <li><a href="#">Skype /// daria.voronina</a></li>
+          <li><a href="#">E-mail /// daria.voronina@gmail.com</a></li>
+          <li><a href="#">Phone /// + 7 916 66 77 112</a></li>
+        </ul>
+
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-vk"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
 </body>
 

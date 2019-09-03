@@ -2,9 +2,10 @@
   @extend %bg-overlay;
   overflow-x: hidden;
 
-  &__inner {
+  &__container {
     height: 100%;
     position: relative;
+    max-width: 1108px;
 
     @include set-gradient((
       "angle": 90deg,

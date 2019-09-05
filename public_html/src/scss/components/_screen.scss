@@ -13,6 +13,14 @@
     background-color: $separator-color;
   }
 
+  // &__title {
+  //   font-size: 1.75rem;
+
+  //   @media (min-width: $screen-md) {
+  //     font-size: $font-size-h2;
+  //   }
+  // }
+
   &__index {
     position: absolute;
     left: 3.85%;

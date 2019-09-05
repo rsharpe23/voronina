@@ -1,28 +1,94 @@
 .intro {
-  padding-top: 10rem;
+  height: 100vh;
+  padding-top: 10vh;
+  color: $color-white;
   background-color: $color-light-gray;
-  @include set-bg-image("../img/intro-bg.jpg", false, right);
+
+  @media (min-width: $screen-md) {
+    padding-top: 7.25rem;
+    color: inherit;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 8rem;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 10rem;
+  }
+
+  &::before {
+    // content: none;
+    // width: 48%;
+    // height: 100%;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // @include set-bg-image("../img/intro-bg.jpg", cover);
+
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include set-bg-image("../img/voronina.jpg", cover);
+
+    @media (min-width: $screen-md) {
+      width: 48%;
+      right: 0;
+      left: auto;
+      @include set-bg-image("../img/intro-bg.jpg", cover);
+    }
+  }
+
+  &::after {
+    @extend %bg-overlay;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(100, 100, 100, 0.5) 100%);
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
 
   &__container {
+    position: relative;
+    z-index: 1;
     max-width: 1160px;
   }
 
   &__item {
-    &:nth-child(1) {
-      flex: 0 0 43.5%;
+    &:nth-child(2) {
+      display: none;
+    }
+
+    @media (min-width: $screen-md) {
+      &:nth-child(1) {
+        flex: 0 0 43.5%;
+      }
+
+      &:nth-child(2) {
+        display: block;
+      }
     }
   }
 
   &__title {
     position: relative;
     z-index: 1;
-    margin-top: 8.65rem;
+    margin-top: 17vh;
+    // margin-top: 8.65rem;
 
     &::before,
     &::after {
+      display: none;
       position: absolute;
       color: $text-color-inverted;
       z-index: -1;
+
+      @media (min-width: $screen-md) {
+        display: inline;
+      }
     }
 
     &::before {
@@ -45,79 +111,57 @@
     font-weight: $font-weight-light;
   }
 
+  &__link {
+    @include link-set-color($text-color-inverted);
+
+    @media (min-width: $screen-md) {
+      @include link-set-color($link-color);  
+    }
+  }
+
   &__socials {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    position: absolute;
+    left: $gutter-width;
+    bottom: 0;
+
+    // padding-top: 2rem;
+    // padding-bottom: 2rem;
   }
 
   &__index {
     top: 35%;
     left: 1%;
   }
+
+  &__mobile-menu {
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    margin-bottom: 0;
+    background-color: $bg-color;
+
+    @media (min-width: $screen-lg) {
+      display: none !important;
+    }
+
+    > li {
+      margin-bottom: 1.25rem;
+      border-bottom: $border-setup;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      letter-spacing: 4px;
+
+      @media (min-width: $screen-md) {
+        font-size: _rem(36px);
+      }
+    }
+  }
 }
-
-// .intro {
-//   @include set-bg-image("../img/intro-bg.jpg", false, right);
-//   background-color: $color-light-gray;
-
-//   &__area {
-//     padding-top: 10rem;
-//   }
-
-//   &__container {
-//     max-width: 1160px;
-//   }
-
-//   &__cover {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-
-//   &__info {
-//     flex: 0 0 44.75%;
-//     width: 44.75%;
-//     margin-top: 8.75rem;
-//     padding-right: $gutter-width;
-//   }
-
-//   &__title {
-//     position: relative;
-//     margin-bottom: 1.75rem;
-
-//     &::before,
-//     &::after {
-//       position: absolute;
-//       color: $text-color-inverted;
-//       z-index: -1;
-//     }
-
-//     &::before {
-//       content: "Food";
-//       top: -34px;
-//       left: -32px;
-//       font-size: 5rem;
-//       letter-spacing: 3px;
-//     }
-
-//     &::after {
-//       content: "Photogrphy";
-//       right: 38px;
-//       bottom: -28px;
-//       font-size: 3.25rem;
-//     }
-//   }
-
-//   &__content {
-//     font-weight: $font-weight-light;
-//   }
-
-//   &__socials {
-//     padding-top: 2.25rem;
-//     padding-bottom: 2.15rem;
-//   }
-
-//   &__index {
-//     top: 35%;
-//     left: 1%;
-//   }
-// }

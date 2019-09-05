@@ -1,7 +1,11 @@
 .socials {
-  display: flex;
-  flex-wrap: wrap;
+  display: none;
   margin-bottom: 0;
+
+  @media (min-width: $screen-xl) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__item {
     color: $text-color;

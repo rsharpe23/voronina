@@ -1,13 +1,28 @@
+$link-color: $text-color !default;
+
+@mixin link-set-color($color) {
+  color: $color;
+
+  &::before {
+    background-color: $color;
+  }
+}
+
 .link {
   display: inline-block;
   position: relative;
-  color: $text-color;
+  // color: $link-color;
   font-family: $font-family-myriadPro;
-  font-size: $font-size;
+  font-size: $font-size-small;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1.5px;
+  @include link-set-color($link-color);
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size;
+  }
 
   &:hover {
     color: inherit;
@@ -29,7 +44,7 @@
     position: absolute;
     bottom: -6px;
     left: 0;
-    background-color: $color-darken;
+    // background-color: $link-color;
     @include set-transition("width");
   }
 

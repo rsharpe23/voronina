@@ -1,3 +1,11 @@
+@mixin init-h-font-size() {
+  @include set-h-font-size((2.75rem, 1.75rem, 1.25rem, 1rem));
+
+  @media (min-width: $screen-md) {
+    @include set-h-font-size(($font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4));
+  }
+}
+
 @mixin set-h-font-size($font-size-list) {
   @each $font-size in $font-size-list {
     h#{index($font-size-list, $font-size)} {
@@ -12,7 +20,8 @@
   box-sizing: border-box !important;
 }
 
-html {
+html, 
+body {
   font-size: $font-size;
 }
 
@@ -22,10 +31,13 @@ body {
   color: $text-color;
   background-color: $color-white;
   font-family: $font-family-sorceSerifPro;
-  font-size: $font-size-large;
   font-weight: $font-weight-semibold;
   line-height: $line-height;
   overflow-x: hidden; // HACK: Для корректного проигрывания анимаций, чтобы не вылазили и т.д.
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-large;  
+  }
 }
 
 h1,
@@ -38,7 +50,7 @@ ol {
   margin-bottom: $margin-bottom;
 }
 
-@include set-h-font-size(($font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4));
+@include init-h-font-size();
 
 strong {
   font-size: $font-size-large;
@@ -53,4 +65,9 @@ a {
   &:hover {
     color: $color-magento;
   }
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
 }

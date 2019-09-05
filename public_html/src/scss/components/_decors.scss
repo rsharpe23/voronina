@@ -15,11 +15,16 @@
     &::before,
     &::after {
       content: "";
+      display: none;
       width: $strip-width;
       height: 100%;
       position: absolute;
       z-index: -1;
       top: 0;
+
+      @media (min-width: $screen-md) {
+        display: block;
+      }
     }
 
     &::before {
@@ -42,7 +47,12 @@
   }
 
   &__item {
+    display: none;
     position: absolute;
     z-index: 1;
+
+    @media (min-width: $screen-lg) {
+      display: block;  
+    }
   }
 }

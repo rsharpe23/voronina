@@ -1,5 +1,5 @@
 .index {
-  display: inline-block;
+  display: none;
   padding-right: 0.6rem;
   padding-left: 0.6rem;
   border-bottom: 2px solid $color-darken;
@@ -9,4 +9,8 @@
   font-style: italic;
   line-height: 2;
   pointer-events: none;
+
+  @media (min-width: $screen-xl) {
+    display: inline-block;
+  }
 }

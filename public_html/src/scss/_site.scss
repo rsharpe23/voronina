@@ -71,3 +71,26 @@ a {
   position: relative;
   z-index: 1;
 }
+
+// FIX ie (10, 11)
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header__img-wrap,
+  .header__navbar,
+  .header__nav,
+  .header__phone,
+  .intro__item:nth-child(1),
+  .work__item,
+  .about__item, 
+  .price__item {
+    flex: 0 0 auto !important;
+  }
+
+  .work__item figure > a .img,
+  .price__item figure > a .img {
+    font-family: 'object-fit: cover;';
+
+    @media (min-width: $screen-md) {
+      font-family: 'object-fit: fill;';
+    }
+  }
+}

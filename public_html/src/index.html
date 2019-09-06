@@ -309,6 +309,15 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+      document.write('<script src="js/ie/ofi.min.js"><\/script>');
+      window.addEventListener('load', function (event) {
+        objectFitImages('.work__item figure > a .img, .price__item figure > a .img');
+      });
+    }
+  </script>
 </body>
 
 </html>
